@@ -4,7 +4,7 @@ var express = require('express');
 var app = express();
 
 //instantiate a server on port 3030
-var server = app.listen(3030);
+var server = app.listen(process.env.PORT || 3030);
 
 //expose the local public folder for inluding files js, css etc..
 app.use(express.static('public'));
